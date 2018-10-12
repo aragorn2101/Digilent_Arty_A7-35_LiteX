@@ -2,16 +2,17 @@
 
 Projects source files written in Python v3 and making use of the Migen HDL
 generator. Each script is a different project, which usually has a counterpart
-in the VHDL or Verilog projects section. A Migen script is compiled by running
-the following in an appropriately set up environment:
+in the VHDL/Verilog sections in repository Digilent_Arty_A7-35-HDL.
+
+A Migen script is compiled by running the following in an appropriately set up
+environment:
 ```
 $ python3 SCRIPTNAME
 ```
-A build directory will be created and will be populated with the .xpr,
-.bit files, along with all the usual Vivado stuff.
 
-The bitstream file (top.bit) can be loaded directly on the FPGA using Vivado
-Hardware Manager.
+A build directory will be created and will be populated with the .xpr, .bit
+files, along with all the usual Vivado stuff. The bitstream file (top.bit) can
+be loaded directly on the FPGA using Vivado Hardware Manager.
 
 For the Migen documentation check out:
 [Migen Manual](https://m-labs.hk/migen/manual/)
