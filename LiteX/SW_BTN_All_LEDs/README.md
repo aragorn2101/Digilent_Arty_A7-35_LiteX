@@ -13,7 +13,7 @@ board.
 
 ## Scripts descriptions
 
-* ### led_brightness
+* ### btn_brightness
 
 Small script which increases/decreases the brightness of the 4 RGB
 LEDs. The colour is blue by default and the initial PWM level is

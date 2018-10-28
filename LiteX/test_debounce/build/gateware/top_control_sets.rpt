@@ -1,0 +1,102 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
+| Date         : Sun Oct 28 15:14:50 2018
+| Host         : MiddleEarth running 64-bit unknown
+| Command      : report_control_sets -verbose -file top_control_sets.rpt
+| Design       : top
+| Device       : xc7a35ti
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    35 |
+| Unused register locations in slices containing registers |    30 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            1 |
+|      4 |            2 |
+|      8 |           21 |
+|    16+ |           11 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              21 |           10 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             239 |           62 |
+| Yes          | No                    | No                     |              45 |           11 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             249 |           65 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------+-----------------------------------------+--------------------------------------------------------+------------------+----------------+
+|     Clock Signal     |              Enable Signal              |                    Set/Reset Signal                    | Slice Load Count | Bel Load Count |
++----------------------+-----------------------------------------+--------------------------------------------------------+------------------+----------------+
+|  CLK100MHZ_IBUF_BUFG | serial_tx_i_1_n_0                       | int_rst                                                |                1 |              1 |
+|  CLK100MHZ_IBUF_BUFG | uartwishbonebridge_tx_ready134_out      | uartwishbonebridge_tx_tx_bitcount[3]_i_1_n_0           |                1 |              4 |
+|  CLK100MHZ_IBUF_BUFG | uartwishbonebridge_rx_rx_bitcount       | uartwishbonebridge_rx_rx_bitcount[3]_i_1_n_0           |                2 |              4 |
+|  CLK100MHZ_IBUF_BUFG | uartwishbonebridge_length_ce            |                                                        |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG | csrbank4_r_duty0_re                     | int_rst                                                |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG | csrbank3_g_duty0_re                     | int_rst                                                |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG | uartwishbonebridge_cmd_ce               |                                                        |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG | csrbank3_b_duty0_re                     | int_rst                                                |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG | csrbank3_r_duty0_re                     | int_rst                                                |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG | csrbank5_r_duty0_re                     | int_rst                                                |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG | csrbank4_g_duty0_re                     | int_rst                                                |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG | csrbank5_g_duty0_re                     | int_rst                                                |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG | csrbank4_b_duty0_re                     | int_rst                                                |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG | csrbank6_r_duty0_re                     | int_rst                                                |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG | uartwishbonebridge_rx_payload_data      | int_rst                                                |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG | uartwishbonebridge_rx_rx_reg            | int_rst                                                |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG |                                         | interface4_bank_bus_dat_r[7]_i_1_n_0                   |                3 |              8 |
+|  CLK100MHZ_IBUF_BUFG | csrbank6_g_duty0_re                     | int_rst                                                |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG | uartwishbonebridge_tx_tx_reg[7]_i_1_n_0 | int_rst                                                |                3 |              8 |
+|  CLK100MHZ_IBUF_BUFG |                                         | interface6_bank_bus_dat_r[7]_i_1_n_0                   |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG |                                         | interface5_bank_bus_dat_r[7]_i_1_n_0                   |                3 |              8 |
+|  CLK100MHZ_IBUF_BUFG |                                         | interface3_bank_bus_dat_r[7]_i_1_n_0                   |                3 |              8 |
+|  CLK100MHZ_IBUF_BUFG | csrbank5_b_duty0_re                     | int_rst                                                |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG | csrbank6_b_duty0_re                     | int_rst                                                |                2 |              8 |
+|  CLK100MHZ_IBUF_BUFG |                                         | count[0]_i_1_n_0                                       |                5 |             17 |
+|  CLK100MHZ_IBUF_BUFG |                                         |                                                        |               10 |             21 |
+|  CLK100MHZ_IBUF_BUFG | sel                                     | uartwishbonebridge_count[0]_i_1_n_0                    |                6 |             24 |
+|  CLK100MHZ_IBUF_BUFG | uartwishbonebridge_address_ce           |                                                        |                7 |             29 |
+|  CLK100MHZ_IBUF_BUFG |                                         | uartwishbonebridge_rx_phase_accumulator_rx[30]_i_1_n_0 |                8 |             31 |
+|  CLK100MHZ_IBUF_BUFG | csrbank2_scratch0_re                    | int_rst                                                |                5 |             32 |
+|  CLK100MHZ_IBUF_BUFG | basesoc_bus_errors                      | int_rst                                                |                8 |             32 |
+|  CLK100MHZ_IBUF_BUFG | uartwishbonebridge_data[31]_i_2_n_0     | uartwishbonebridge_data                                |               11 |             32 |
+|  CLK100MHZ_IBUF_BUFG |                                         | interface2_bank_bus_dat_r[31]_i_1_n_0                  |               11 |             32 |
+|  CLK100MHZ_IBUF_BUFG |                                         | uartwishbonebridge_tx_phase_accumulator_tx[31]_i_1_n_0 |                8 |             32 |
+|  CLK100MHZ_IBUF_BUFG |                                         | int_rst                                                |               19 |             95 |
++----------------------+-----------------------------------------+--------------------------------------------------------+------------------+----------------+
+
+
