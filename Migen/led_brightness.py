@@ -88,7 +88,7 @@ class Debounce(Module):
         sync1.eq(0)
         curr_state.eq(0)
 
-        # Sequential code
+        # Synchronous code
         self.sync += [
                 sync0.eq(button),
                 sync1.eq(sync0),
@@ -146,7 +146,7 @@ class main(Module):
         self.submodules += [debbtn0, debbtn1]
 
 
-        # Sequential code
+        # Synchronous code
         self.sync += [
                 If (btn0_state == 1,
                     pwm_duty.eq(pwm_duty - 16)

@@ -103,7 +103,7 @@ class Debounce(Module):
         sync1.eq(0)
         curr_state.eq(0)
 
-        # Sequential code
+        # Synchronous code
         self.sync += [
                 sync0.eq(button),
                 sync1.eq(sync0),
@@ -161,7 +161,7 @@ class main(Module):
 
             self.submodules += [ debbtn ]
 
-            # Sequential code
+            # Synchronous code
             self.sync += [
                     If (btn_state[i] == 1,
                         If (platform.request("switch", i) == 1,

@@ -107,7 +107,7 @@ class Debounce(Module):
         sync1.eq(0)
         curr_state.eq(0)
 
-        # Sequential code
+        # Synchronous code
         self.sync += [
                 sync0.eq(button),
                 sync1.eq(sync0),
@@ -175,7 +175,7 @@ class main(Module):
         for i in range(0,4):  # loop over LEDs
             for j in range(0,3):  # loop over colours
 
-                # Sequential code
+                # Synchronous code
                 self.sync += [
                         If ((sw_states[i] == 1),
                             If (btn_states[j] == 1,
