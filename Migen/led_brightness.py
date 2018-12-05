@@ -102,7 +102,7 @@ class Debounce(Module):
                 )
         ]
 
-        # Concurrent code
+        # Combinatorial code
         self.comb += [
                 idle.eq(curr_state == sync1),
                 deb_state.eq(~idle & (counter >= 249999) & ~curr_state)
@@ -156,7 +156,7 @@ class main(Module):
                 )
         ]
 
-        # Concurrent code
+        # Combinatorial code
         self.comb += []
 
         for i in range(0,4):

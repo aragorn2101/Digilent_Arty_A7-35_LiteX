@@ -117,7 +117,7 @@ class Debounce(Module):
                 )
         ]
 
-        # Concurrent code
+        # Combinatorial code
         self.comb += [
                 idle.eq(curr_state == sync1),
                 deb_state.eq(~idle & (counter >= 249999) & ~curr_state)
@@ -183,7 +183,7 @@ class main(Module):
                 self.submodules += [ pwmled ]
 
 
-        # Concurrent code
+        # Combinatorial code
         self.comb += [ ]
 
 ###  END module main  ###

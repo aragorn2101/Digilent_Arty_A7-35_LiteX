@@ -104,7 +104,7 @@ class Debounce(Module):
                 )
         ]
 
-        # Concurrent code
+        # Combinatorial code
         self.comb += [
                 idle.eq(curr_state == sync1),
                 deb_state.eq(~idle & (counter >= 249999) & ~curr_state)
@@ -165,7 +165,7 @@ class main(Module):
                 )
         ]
 
-        # Concurrent code
+        # Combinatorial code
         for i in range(0,4):
             led = platform.request("Monoled", i)
             self.comb += [ led.eq(countsec[i]) ]
